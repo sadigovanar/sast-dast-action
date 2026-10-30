@@ -106,9 +106,9 @@ jobs:
       matrix:
         url:
           - name: front
-            value: https://$TARGET_URL_FRONT/
+            value: https://${{ vars.TARGET_URL_FRONT }}/
           - name: back
-            value: https://$TARGET_URL_BACK
+            value: https://${{ vars.TARGET_URL_BACK }}/
     needs: [deploy]
     steps:
       - name: ZAP Scan
